@@ -1,0 +1,21 @@
+{
+  "name": "vst3-bridge-server",
+  "version": "1.0.0",
+  "description": "Local VST3 bridge server for Web DAW — runs on your computer to host VST3 plugins",
+  "main": "bridge.js",
+  "bin": {
+    "vst3-bridge": "./bridge.js"
+  },
+  "scripts": {
+    "start": "node bridge.js",
+    "start:low-latency": "node bridge.js --buffer 128 --rate 48000"
+  },
+  "dependencies": {
+    "ws": "^8.18.0",
+    "naudiodon": "^2.0.5"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "os": ["darwin", "linux", "win32"]
+}
