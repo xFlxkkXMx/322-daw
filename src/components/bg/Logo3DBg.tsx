@@ -25,7 +25,8 @@ class R3FErrorBoundary extends Component<{ children: ReactNode }> {
 
 function LogoModel() {
   const groupRef = useRef<THREE.Group>(null!);
-  const { scene } = useGLTF(`${import.meta.env.BASE_URL}322-logo.glb`);
+  const GLB_URL = "https://github.com/xFlxkkXMx/322-daw/releases/download/v1.0.0-assets/322-logo.glb";
+  const { scene } = useGLTF(GLB_URL);
 
   const cloned = scene.clone(true);
   cloned.traverse((child) => {
