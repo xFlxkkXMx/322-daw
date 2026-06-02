@@ -5,6 +5,7 @@ import {
 } from "@workspace/api-client-react";
 import { useAudioEngine } from "@/hooks/useAudioEngine";
 import { PitchMonitor } from "@/components/monitor/PitchMonitor";
+import Logo3DBg from "@/components/bg/Logo3DBg";
 
 function formatTime(ms: number) {
   const total = Math.floor(ms / 1000);
@@ -268,7 +269,10 @@ export default function Workspace() {
         </div>
 
         {/* Arrangement */}
-        <div className="arrangement">
+        <div className="arrangement" style={{ position: "relative" }}>
+          {/* 3D logo background */}
+          <Logo3DBg />
+
           {/* Ruler */}
           <div className="arrangement__ruler">
             {[...Array(32)].map((_, i) => (
